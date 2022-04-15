@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify, render_template, url_for, redirect, session
 from flask_cors import CORS
 from src import *
-from platform import platform
+import os
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "thisscreetkey2022"
 CORS(app)
@@ -70,4 +70,6 @@ def metodelogin():
         return jsonify({"message": "Hello from my server"})
 
 
-app.run(debug=True)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=int(
+        os.environ.get("PORT", "5000")), debug=True)
