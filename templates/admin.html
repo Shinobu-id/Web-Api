@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hudaxcode</title>
+    <body>
+    <div class="container">
+        <span class="text first-text">I'm a</span>
+        <span class="text sec-text">hudaxcode</span>
+    </div>
+    <script>
+        const text = document.querySelector(".sec-text");
+        const textLoad = () => {
+            setTimeout(() => {
+                text.textContent = "hudaxcode";
+            }, 0);
+            setTimeout(() => {
+                text.textContent = "Blogger";
+            }, 4000);
+            setTimeout(() => {
+                text.textContent = "Backend";
+            }, 8000); //1s = 1000 milliseconds
+        }
+        textLoad();
+        setInterval(textLoad, 12000);
+    </script>
+    <style>
+    	/* ===== Google Font Import - Poppins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #010718;
+    overflow: hidden;
+}
+.container{
+    width: 246px;
+    overflow: hidden;
+}
+.container .text{
+    position: relative;
+    color: #4070F4;
+    font-size: 30px;
+    font-weight: 600;
+}
+.container .text.first-text{
+    color: #FFF;
+}
+.text.sec-text:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #010718;
+    border-left: 2px solid #4070F4;
+    animation: animate 4s steps(12) infinite;
+}
+@keyframes animate{
+    40%, 60%{
+        left: calc(100% + 4px);
+    }
+    100%{
+        left: 0%;
+    }
+}
+    	</style>
+</body>
+    <!-- Style CSS -->
+      <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+      <link rel="stylesheet" href="{{url_for('static', filename='css_type/style.css')}}">      
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+      	<!-- Demo CSS -->
+	<link rel="stylesheet" href="{{url_for('static', filename='css/demo.css')}}">     
+  </head>
+ </div> 
+ </header>
+      <!-- Sidebar Menu HTML -->
+      <div class="page-wrapper chiller-theme toggled">
+<a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+<i class="fas fa-bars"></i>
+</a>
+<nav id="sidebar" class="sidebar-wrapper">
+<div class="sidebar-content">
+<div class="sidebar-brand">
+   <a href="#">Api serverku</a>
+   <div id="close-sidebar">
+      <i class="fas fa-times"></i>
+   </div>
+</div>
+<div class="sidebar-header">
+   <div class="user-pic">
+      <img class="img-responsive img-rounded" src="{{url_for('static',filename='images/zero.jpg')}}"
+         alt="User picture">
+   </div>
+   <div class="user-info">
+      <span class="user-name">hudaxcode
+      <strong></strong>
+      </span>
+      <span class="user-role">Programer</span>
+      <span class="user-status">
+      <i class="fa fa-circle"></i>
+      <span>Online</span>
+      </span>
+   </div>
+</div>
+<!-- sidebar-header  -->
+
+<!-- sidebar-search  -->
+<div class="sidebar-menu">
+   <ul>
+      <li class="header-menu">
+         <span>Feature rest Api</span>
+      </li>
+      <li class="sidebar-dropdown">
+         <a href="#">
+         <i class="fas fa-align-center"></i>
+         <span>Facebook</span>
+         <!-- <span class="badge badge-pill badge-warning">New</span> -->
+         </a>
+         <div class="sidebar-submenu">
+            <ul>
+               <li>
+                  <a href="#">Metode Login
+                  <!-- <span class="badge badge-pill badge-success">Pro</span> -->
+                  </a>
+               </li>
+               <li>
+                  <a href="#">Scraping publik Id</a>
+               </li>
+               <li>
+                  <a href="#">Scraping Group Id</a>
+               </li>
+            </ul>
+         </div>
+      </li>
+      <li class="sidebar-dropdown">
+         <a href="#">
+         <i class="fas fa-laptop"></i>
+         <span>E-commerce</span>
+         <!-- <span class="badge badge-pill badge-danger">3</span> -->
+         </a>
+         <div class="sidebar-submenu">
+            <ul>
+               <li>
+                  <a href="#">Products
+                  </a>
+               </li>
+               <li>
+                  <a href="#">Orders</a>
+               </li>
+               <li>
+                  <a href="#">Credit cart</a>
+               </li>
+            </ul>
+         </div>
+      </li>
+      <li class="sidebar-dropdown">
+         <a href="#">
+         <i class="fas fa-key"></i>
+         <span>License</span>
+         <!-- <span class="badge badge-pill badge-danger">3</span> -->
+         </a>
+         <div class="sidebar-submenu">
+            <ul>
+               <li>
+                  <a href="#">Tambahkan Key
+                  </a>
+               </li>
+               <li>
+                  <a href="#">Active User</a>
+               </li>
+            </ul>
+         </div>
+      </li>
+      <!-- Log Out -->
+      <li class="sidebar">
+         <a href="/logout">
+         <i class="fas fa-sign-out-alt"></i>
+         <span>Log Out</span>
+         </li></a>
+      <!-- sidebar-menu  -->
+    </div>
+    <!-- sidebar-content  -->
+    
+  <!-- sidebar-wrapper  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+      <!-- End Sidebar Menu HTML --> 
+      <script>
+      jQuery(function ($) {
+    $(".sidebar-dropdown > a").click(function() {
+  $(".sidebar-submenu").slideUp(200);
+  if (
+    $(this)
+      .parent()
+      .hasClass("active")
+  ) {
+    $(".sidebar-dropdown").removeClass("active");
+    $(this)
+      .parent()
+      .removeClass("active");
+  } else {
+    $(".sidebar-dropdown").removeClass("active");
+    $(this)
+      .next(".sidebar-submenu")
+      .slideDown(200);
+    $(this)
+      .parent()
+      .addClass("active");
+  }
+});
+$("#close-sidebar").click(function() {
+  $(".page-wrapper").removeClass("toggled");
+});
+$("#show-sidebar").click(function() {
+  $(".page-wrapper").addClass("toggled");
+});
+});
+      </script>
+</html>
